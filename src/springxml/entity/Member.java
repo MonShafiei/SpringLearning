@@ -2,7 +2,7 @@ package springxml.entity;
 
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class Member {
 
 	private Integer id;
