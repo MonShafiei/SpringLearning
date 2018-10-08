@@ -1,10 +1,22 @@
 package springxml.entity;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Member {
 
 	private Integer id;
 	private String name;
 	private String family;
+	private MemberType memberType;
+	
+	
+	public MemberType getMemberType() {
+		return memberType;
+	}
+	public void setMemberType(MemberType memberType) {
+		this.memberType = memberType;
+	}
 	public Integer getId() {
 		return id;
 	}
@@ -25,7 +37,7 @@ public class Member {
 	}
 	@Override
 	public String toString() {
-		return "Member [id=" + id + ", name=" + name + ", family=" + family + "]";
+		return "Member [id=" + id + ", name=" + name + ", family=" + family + ", memberType=" + memberType + "]";
 	}
 	
 	

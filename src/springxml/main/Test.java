@@ -6,19 +6,27 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 
 import springxml.entity.Member;
+import springxml.entity.MemberType;
 
 public class Test {
 
 	public static void main(String[] args) {
 
-		XmlBeanFactory factory = new XmlBeanFactory(new ClassPathResource("Spring.xml"));
-		Member m = (Member) factory.getBean("memberId");
 		
 		
 		
-//		ApplicationContext ctx = new ClassPathXmlApplicationContext("Spring.xml");
-//		Member m = (Member) ctx.getBean("memberId");
+//		XmlBeanFactory factory = new XmlBeanFactory(new ClassPathResource("Spring.xml"));
+//		Member m = (Member) factory.getBean("memberId");
+//		
 		
+		
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("Spring.xml");
+		Member m = ctx.getBean(Member.class);
+		MemberType mt = (MemberType) ctx.getBean("memberType");
+		
+		mt.setDetails("Hichi");
+		
+		m.setMemberType(mt);
 		m.setFamily("Shafiei");
 		m.setName("Mohsen");
 		m.setId(12);
