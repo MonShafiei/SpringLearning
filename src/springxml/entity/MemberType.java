@@ -1,8 +1,13 @@
 package springxml.entity;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class MemberType {
 	
 	private String details;
+	@Value("Samall")
 	private String type;
 	
 	public String getDetails() {

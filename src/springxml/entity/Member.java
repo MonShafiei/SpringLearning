@@ -1,19 +1,26 @@
 package springxml.entity;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Component;
 
-//@Component
+@Component
 public class Member {
 
 	private Integer id;
 	private String name;
 	private String family;
+	
+	
 	private MemberType memberType;
 	
 	
 	public MemberType getMemberType() {
 		return memberType;
 	}
+	
+	@Autowired
+	@Required
 	public void setMemberType(MemberType memberType) {
 		this.memberType = memberType;
 	}

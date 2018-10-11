@@ -25,11 +25,14 @@ public class Test {
 //		ApplicationContext ctx = new ClassPathXmlApplicationContext("Spring.xml");
 		ApplicationContext ctx = new AnnotationConfigApplicationContext(Config.class);
 		Member m = ctx.getBean(Member.class);
-		MemberType mt = (MemberType) ctx.getBean("memberType");
+		//MemberType mt = ctx.getBean(MemberType.class);
+		//MemberType mt = (MemberType) ctx.getBean("memberType");
 		
-		mt.setDetails("Hichi");
+		//mt.setDetails("Hichi");
 		
-		m.setMemberType(mt);
+		
+		m.getMemberType().setDetails("Hichiiiii");
+		//m.setMemberType(mt);
 		m.setFamily("Shafiei");
 		m.setName("Mohsen");
 		m.setId(12);

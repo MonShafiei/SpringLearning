@@ -7,8 +7,11 @@
 
   
 
-  <!-- <bean id="memberType" class="springxml.entity.MemberType"/> -->
+ <bean id="parentid" class="inheritance.Parent"> 
+ <property name="name" value="ParentName" />
+ </bean>
+ 
+ <bean id="childid"  class="inheritance.Child" parent="parentid"/>
 
-  <!-- <context:component-scan base-package="springxml.entity"/> -->
 
 </beans>

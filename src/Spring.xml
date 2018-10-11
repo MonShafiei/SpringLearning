@@ -7,8 +7,8 @@
 
   
 
-  <bean id="memberType" class="springxml.entity.MemberType"/>
+  <!-- <bean id="memberType" class="springxml.entity.MemberType"/> -->
 
-  <context:component-scan base-package="springxml.entity"/>
+  <!-- <context:component-scan base-package="springxml.entity"/> -->
 
 </beans>
